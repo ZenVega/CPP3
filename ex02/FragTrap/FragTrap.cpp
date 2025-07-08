@@ -9,23 +9,23 @@
 /*   Updated: 2025/07/05 10:43:29 by uschmidt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
-ScavTrap::ScavTrap() :
+FragTrap::FragTrap() :
 	ClapTrap("default trap")
 {
-	cout << "ScavTrap: " << _name << " created" << endl;
-	ClapTrap::setStats(100, 50, 20);
+	cout << "FragTrap: " << _name << " created" << endl;
+	ClapTrap::setStats(100, 100, 30);
 };
 
-ScavTrap::ScavTrap(string name) :
+FragTrap::FragTrap(string name) :
 	ClapTrap(name)
 {
-	cout << "ScavTrap: " << _name << " created" << endl;
-	ClapTrap::setStats(100, 50, 20);
+	cout << "FragTrap: " << _name << " created" << endl;
+	ClapTrap::setStats(100, 100, 30);
 };
 
-ScavTrap::ScavTrap(const ScavTrap &other) :
+FragTrap::FragTrap(const FragTrap &other) :
 	ClapTrap(other._name)
 {
 	if (this != &other)
@@ -34,27 +34,15 @@ ScavTrap::ScavTrap(const ScavTrap &other) :
 		_energyPoints = other._energyPoints;
 		_attackDamage = other._attackDamage;
 	}
-	cout << "ScavTrap: " << _name << " created from copy constructor" << endl;
+	cout << "FragTrap: " << _name << " created from copy constructor" << endl;
 };
 
-ScavTrap::~ScavTrap()
+FragTrap::~FragTrap()
 {
-	cout << "ScavTrap: " << _name << " destroyed" << endl;
+	cout << "FragTrap: " << _name << " destroyed" << endl;
 };
 
-void ScavTrap::attack(const string &target)
+void FragTrap::highFivesGuys(void)
 {
-	if (_energyPoints > 0 && _hitPoints > 0)
-	{
-		_energyPoints--;
-		cout << "ScavTrap " << _name << " attacks " << target;
-		cout << ", causing " << _attackDamage << " points of damage!" << endl;
-	}
-	else
-		cout << "ScavTrap: " << _name << " out of energy or hitPoints" << endl;
-};
-
-void ScavTrap::guardGate(void)
-{
-	cout << "ScavTrap: " << _name << " now in Gate Keeper Mode" << endl;
+	cout << "FragTrap: " << _name << " hey hey, gimme five?!" << endl;
 };

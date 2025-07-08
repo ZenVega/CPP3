@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: uschmidt <uschmidt@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/06 16:28:11 by uschmidt          #+#    #+#             */
-/*   Updated: 2025/07/05 10:39:10 by uschmidt         ###   ########.fr       */
+/*   Created: 2025/07/04 16:14:15 by uschmidt          #+#    #+#             */
+/*   Updated: 2025/07/05 10:33:49 by uschmidt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/main.hpp"
+#ifndef SCAVTRAP_HPP
+#define SCAVTRAP_HPP
 
-int main(void)
+#include "../ClapTrap/ClapTrap.hpp"
+#include "../includes/CONSTANTS.hpp"
+
+class ScavTrap : public ClapTrap
 {
-	ClapTrap trap_a = ClapTrap("clap_a");
-	ScavTrap trap_b = ScavTrap("scav_b");
+protected:
+public:
+	ScavTrap();
+	ScavTrap(string name);
+	ScavTrap(const ScavTrap &other);
+	~ScavTrap();
 
-	trap_a.attack("scav_b");
-	trap_b.takeDamage(trap_a.getAttackDamage());
-	trap_a.attack("scav_b");
-	trap_b.takeDamage(trap_a.getAttackDamage());
-	trap_b.attack("clap_a");
-	trap_b.beRepaired(3);
-	trap_b.guardGate();
+	void attack(const string &target);
+	void guardGate();
+};
 
-	return 0;
-}
+#endif

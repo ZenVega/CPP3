@@ -16,14 +16,17 @@ int main(void)
 {
 	ClapTrap trap_a = ClapTrap("clap_a");
 	ScavTrap trap_b = ScavTrap("scav_b");
+	FragTrap trap_c = FragTrap("frag_a");
 
-	trap_a.attack("scav_b");
+	trap_a.attack("trap_b");
 	trap_b.takeDamage(trap_a.getAttackDamage());
-	trap_a.attack("scav_b");
-	trap_b.takeDamage(trap_a.getAttackDamage());
-	trap_b.attack("clap_a");
-	trap_b.beRepaired(3);
+	trap_b.attack("trap_c");
+	trap_c.takeDamage(trap_b.getAttackDamage());
+	trap_c.attack("trap_a");
+	trap_a.takeDamage(trap_c.getAttackDamage());
+	trap_c.beRepaired(3);
 	trap_b.guardGate();
+	trap_c.highFivesGuys();
 
 	return 0;
 }

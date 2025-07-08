@@ -29,9 +29,8 @@ public:
 	ClapTrap(const ClapTrap &other);
 	~ClapTrap();
 
-	ClapTrap &operator=(const ClapTrap &other);
-	void	  setStats(unsigned int hitPoints, unsigned int energyPoints, unsigned int attackDamage);
-	// virtual causes to overwrite attack during execution, rather than compiling
+	ClapTrap	&operator=(const ClapTrap &other);
+	void		 setStats(unsigned int hitPoints, unsigned int energyPoints, unsigned int attackDamage);
 	virtual void attack(const string &target);
 	void		 takeDamage(unsigned int amount);
 	void		 beRepaired(unsigned int amount);
