@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
+/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: uschmidt <uschmidt@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/05 09:08:50 by uschmidt          #+#    #+#             */
-/*   Updated: 2025/07/05 10:43:29 by uschmidt         ###   ########.fr       */
+/*   Updated: 2025/07/10 09:30:14 by uschmidt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ScavTrap.hpp"
@@ -36,6 +36,18 @@ ScavTrap::ScavTrap(const ScavTrap &other) :
 	}
 	cout << "ScavTrap: " << _name << " created from copy constructor" << endl;
 };
+
+ScavTrap &ScavTrap::operator=(const ScavTrap &other)
+{
+	if (this != &other)
+	{
+		_name		  = other._name;
+		_hitPoints	  = other._hitPoints;
+		_energyPoints = other._energyPoints;
+		_attackDamage = other._attackDamage;
+	}
+	return *this;
+}
 
 ScavTrap::~ScavTrap()
 {

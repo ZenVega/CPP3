@@ -37,6 +37,18 @@ ScavTrap::ScavTrap(const ScavTrap &other) :
 	cout << "ScavTrap: " << _name << " created from copy constructor" << endl;
 };
 
+ScavTrap &ScavTrap::operator=(const ScavTrap &other)
+{
+	if (this != &other)
+	{
+		_name		  = other._name;
+		_hitPoints	  = other._hitPoints;
+		_energyPoints = other._energyPoints;
+		_attackDamage = other._attackDamage;
+	}
+	return *this;
+}
+
 ScavTrap::~ScavTrap()
 {
 	cout << "ScavTrap: " << _name << " destroyed" << endl;

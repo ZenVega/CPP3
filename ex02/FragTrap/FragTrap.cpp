@@ -37,6 +37,18 @@ FragTrap::FragTrap(const FragTrap &other) :
 	cout << "FragTrap: " << _name << " created from copy constructor" << endl;
 };
 
+FragTrap &FragTrap::operator=(const FragTrap &other)
+{
+	if (this != &other)
+	{
+		_name		  = other._name;
+		_hitPoints	  = other._hitPoints;
+		_energyPoints = other._energyPoints;
+		_attackDamage = other._attackDamage;
+	}
+	return *this;
+}
+
 FragTrap::~FragTrap()
 {
 	cout << "FragTrap: " << _name << " destroyed" << endl;

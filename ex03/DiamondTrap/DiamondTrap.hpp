@@ -6,7 +6,7 @@
 /*   By: uschmidt <uschmidt@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/04 16:14:15 by uschmidt          #+#    #+#             */
-/*   Updated: 2025/07/08 11:56:09 by uschmidt         ###   ########.fr       */
+/*   Updated: 2025/07/10 09:36:23 by uschmidt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ public:
 	DiamondTrap();
 	DiamondTrap(string name);
 	DiamondTrap(const DiamondTrap &other);
+	~DiamondTrap();
 	DiamondTrap &operator=(const DiamondTrap &other);
 	using ScavTrap::attack;
 	void whoAmI(void);

@@ -92,7 +92,7 @@ void ClapTrap::beRepaired(unsigned int amount)
 	if (_energyPoints > 0)
 	{
 		_hitPoints += amount;
-		cout << _name << "getting repaired and regains " << amount << " hitPoints." << endl;
+		cout << _name << " getting repaired and regains " << amount << " hitPoints." << endl;
 	}
 	else
 		cout << "ClapTrap " << _name << " out of energy" << endl;

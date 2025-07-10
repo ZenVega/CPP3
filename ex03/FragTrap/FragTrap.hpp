@@ -6,7 +6,7 @@
 /*   By: uschmidt <uschmidt@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/04 16:14:15 by uschmidt          #+#    #+#             */
-/*   Updated: 2025/07/08 11:12:54 by uschmidt         ###   ########.fr       */
+/*   Updated: 2025/07/10 09:28:25 by uschmidt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ public:
 	FragTrap(const FragTrap &other);
 	~FragTrap();
 
-	void highFivesGuys(void);
+	FragTrap &operator=(const FragTrap &other);
+	void	  highFivesGuys(void);
 };
 
 #endif

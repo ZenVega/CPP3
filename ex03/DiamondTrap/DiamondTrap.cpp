@@ -6,7 +6,7 @@
 /*   By: uschmidt <uschmidt@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 10:50:04 by uschmidt          #+#    #+#             */
-/*   Updated: 2025/07/08 12:12:59 by uschmidt         ###   ########.fr       */
+/*   Updated: 2025/07/10 09:39:55 by uschmidt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,11 @@ DiamondTrap::DiamondTrap() :
 	_hitPoints		= FragTrap::_hitPoints;
 	_energyPoints	= ScavTrap::_energyPoints;
 	_attackDamage	= FragTrap::_attackDamage;
+}
+
+DiamondTrap::~DiamondTrap()
+{
+	cout << "DiamondTrap: " << _name << " destroyed" << endl;
 }
 
 DiamondTrap::DiamondTrap(string name) :
@@ -55,6 +60,7 @@ DiamondTrap &DiamondTrap::operator=(const DiamondTrap &other)
 	}
 	return *this;
 }
+
 void DiamondTrap::whoAmI(void)
 {
 	cout << "My name is " << _name << endl;

@@ -6,7 +6,7 @@
 /*   By: uschmidt <uschmidt@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/05 09:08:50 by uschmidt          #+#    #+#             */
-/*   Updated: 2025/07/05 10:43:29 by uschmidt         ###   ########.fr       */
+/*   Updated: 2025/07/10 09:36:04 by uschmidt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ClapTrap.hpp"
@@ -84,7 +84,7 @@ void ClapTrap::beRepaired(unsigned int amount)
 	if (_energyPoints > 0)
 	{
 		_hitPoints += amount;
-		cout << _name << "getting repaired and regains " << amount << " hitPoints." << endl;
+		cout << _name << " getting repaired and regains " << amount << " hitPoints." << endl;
 	}
 	else
 		cout << "ClapTrap " << _name << " out of energy" << endl;

@@ -6,7 +6,7 @@
 /*   By: uschmidt <uschmidt@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/04 16:14:15 by uschmidt          #+#    #+#             */
-/*   Updated: 2025/07/08 11:13:37 by uschmidt         ###   ########.fr       */
+/*   Updated: 2025/07/10 09:30:28 by uschmidt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,9 @@ public:
 	ScavTrap(const ScavTrap &other);
 	~ScavTrap();
 
-	void attack(const string &target);
-	void guardGate();
+	ScavTrap &operator=(const ScavTrap &other);
+	void	  attack(const string &target);
+	void	  guardGate();
 };
 
 #endif
