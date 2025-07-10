@@ -6,7 +6,7 @@
 #    By: uschmidt <uschmidt@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/04 15:45:04 by uschmidt          #+#    #+#              #
-#    Updated: 2025/07/08 12:10:38 by uschmidt         ###   ########.fr        #
+#    Updated: 2025/07/10 09:49:23 by uschmidt         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ OFILES      = $(addprefix $(OBJ_FOLDER), $(notdir $(CFILES:.cpp=.o)))
 
 CC			= c++
 
-CFLAGS		= -g -Wall -Wextra -Werror -std=c++98 -Wshadow -Wno-shadow
+CFLAGS		= -g -Wall -Wextra -Werror -std=c++98 -Wshadow
 
 all: $(NAME) 
 
